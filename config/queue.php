@@ -72,6 +72,16 @@ return [
             'after_commit' => false,
         ],
 
+        'kafka' => [
+            'driver' => 'kafka',
+            'brokers' => env('KAFKA_BROKERS', 'localhost:9092'),
+            'queue' => env('KAFKA_QUEUE', 'default'),
+            'security_protocol' => env('KAFKA_SECURITY_PROTOCOL', null),
+            'sasl_mechanisms' => env('KAFKA_SASL_MECHANISMS', null),
+            'sasl_username' => env('KAFKA_SASL_USERNAME', null),
+            'sasl_password' => env('KAFKA_SASL_PASSWORD', null),
+        ],
+
     ],
 
     /*
